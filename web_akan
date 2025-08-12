@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akselerasi Kompetensi Anak Negeri Foundation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+'warm-blue': '#4FC3F7',
+'warm-orange': '#FF9800',
+'warm-green': '#66BB6A',
+'soft-blue': '#E3F2FD',
+'soft-orange': '#FFF3E0',
+'soft-green': '#E8F5E8'
+}
+}
+}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body { font-family: 'Poppins', sans-serif; }
+.hero-gradient { background: linear-gradient(135deg, #4FC3F7 0%, #66BB6A 100%); }
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.nav-link { transition: color 0.3s ease; }
+.nav-link:hover { color: #FF9800; }
+.btn-primary { background: linear-gradient(45deg, #FF9800, #FFB74D); transition: all 0.3s ease; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,152,0,0.3); }
+.btn-secondary { background: linear-gradient(45deg, #4FC3F7, #81D4FA); transition: all 0.3s ease; }
+.btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(79,195,247,0.3); }
+.section-fade { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.section-fade.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center">
+<div class="flex-shrink-0 flex items-center">
+<div class="w-10 h-10 bg-gradient-to-r from-warm-blue to-warm-green rounded-full flex items-center justify-center mr-3">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+</div>
+<span class="text-xl font-bold text-gray-800">AKAN Foundation</span>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-8">
+<a href="#home" class="nav-link text-gray-700 hover:text-warm-orange font-medium">Home</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-warm-orange font-medium">About Us</a>
+<a href="#programs" class="nav-link text-gray-700 hover:text-warm-orange font-medium">Programs</a>
+<a href="#donations" class="nav-link text-gray-700 hover:text-warm-orange font-medium">Donations</a>
+<a href="#documentation" class="nav-link text-gray-700 hover:text-warm-orange font-medium">Documentation</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-warm-orange font-medium">Contact</a>
+</div>
+</div>
+<div class="md:hidden">
+<button id="mobile-menu-btn" class="text-gray-700 hover:text-warm-orange">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+<div class="px-2 pt-2 pb-3 space-y-1">
+<a href="#home" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">Home</a>
+<a href="#about" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">About Us</a>
+<a href="#programs" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">Programs</a>
+<a href="#donations" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">Donations</a>
+<a href="#documentation" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">Documentation</a>
+<a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-warm-orange">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-gradient pt-20 pb-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="text-white">
+<h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+Empowering Indonesia's Future
+<span class="text-warm-orange">Leaders</span>
+</h1>
+<p class="text-xl mb-8 opacity-90">
+Akselerasi Kompetensi Anak Negeri Foundation is dedicated to developing children's competencies and creating brighter futures for Indonesia's next generation.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">
+Join Our Mission
+</button>
+<button class="btn-secondary text-white px-8 py-4 rounded-full font-semibold text-lg">
+Donate Now
+</button>
+</div>
+</div>
+<div class="relative">
+<div class="bg-white rounded-3xl p-8 shadow-2xl">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-soft-blue rounded-2xl p-6 text-center">
+<div class="text-4xl mb-2">📚</div>
+<h3 class="font-semibold text-gray-800">Education</h3>
+<p class="text-sm text-gray-600">Quality learning programs</p>
+</div>
+<div class="bg-soft-orange rounded-2xl p-6 text-center">
+<div class="text-4xl mb-2">🎯</div>
+<h3 class="font-semibold text-gray-800">Skills</h3>
+<p class="text-sm text-gray-600">Competency development</p>
+</div>
+<div class="bg-soft-green rounded-2xl p-6 text-center">
+<div class="text-4xl mb-2">🌟</div>
+<h3 class="font-semibold text-gray-800">Growth</h3>
+<p class="text-sm text-gray-600">Personal development</p>
+</div>
+<div class="bg-gradient-to-r from-warm-blue to-warm-green rounded-2xl p-6 text-center text-white">
+<div class="text-4xl mb-2">🚀</div>
+<h3 class="font-semibold">Future</h3>
+<p class="text-sm opacity-90">Bright tomorrow</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 section-fade">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">About Our Foundation</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+We believe every child deserves the opportunity to reach their full potential and contribute to Indonesia's bright future.
+</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+<div class="text-center section-fade">
+<div class="w-20 h-20 bg-gradient-to-r from-warm-blue to-warm-green rounded-full flex items-center justify-center mx-auto mb-6">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+<path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+<p class="text-gray-600">
+To create a generation of competent, confident, and compassionate Indonesian children who will lead the nation towards a prosperous future.
+</p>
+</div>
+
+<div class="text-center section-fade">
+<div class="w-20 h-20 bg-gradient-to-r from-warm-orange to-warm-green rounded-full flex items-center justify-center mx-auto mb-6">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+<p class="text-gray-600">
+To provide quality education, skill development programs, and mentorship opportunities that accelerate children's competencies and personal growth.
+</p>
+</div>
+
+<div class="text-center section-fade">
+<div class="w-20 h-20 bg-gradient-to-r from-warm-green to-warm-blue rounded-full flex items-center justify-center mx-auto mb-6">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+</svg>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Our History</h3>
+<p class="text-gray-600">
+Founded in 2020, we have been dedicated to transforming lives through education and empowerment, reaching over 1,000 children across Indonesia.
+</p>
+</div>
+</div>
+
+<div class="bg-gradient-to-r from-soft-blue to-soft-green rounded-3xl p-8 section-fade">
+<div class="text-center">
+<h3 class="text-3xl font-bold text-gray-800 mb-6">Meet Our Team</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center">
+<div class="w-24 h-24 bg-gradient-to-r from-warm-blue to-warm-green rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl text-white font-bold">👩‍💼</span>
+</div>
+<h4 class="text-xl font-semibold text-gray-800">Dr. Sari Wijaya</h4>
+<p class="text-gray-600">Founder & Director</p>
+</div>
+<div class="text-center">
+<div class="w-24 h-24 bg-gradient-to-r from-warm-orange to-warm-green rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl text-white font-bold">👨‍🏫</span>
+</div>
+<h4 class="text-xl font-semibold text-gray-800">Ahmad Rahman</h4>
+<p class="text-gray-600">Education Coordinator</p>
+</div>
+<div class="text-center">
+<div class="w-24 h-24 bg-gradient-to-r from-warm-green to-warm-blue rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="text-2xl text-white font-bold">👩‍💻</span>
+</div>
+<h4 class="text-xl font-semibold text-gray-800">Maya Putri</h4>
+<p class="text-gray-600">Program Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Programs Section -->
+<section id="programs" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 section-fade">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">Our Programs</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+Comprehensive programs designed to accelerate children's competencies and prepare them for a successful future.
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-blue to-warm-green rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">📖</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Literacy Enhancement</h3>
+<p class="text-gray-600 mb-6">
+Comprehensive reading and writing programs to improve literacy skills and foster a love for learning among children.
+</p>
+<div class="flex items-center text-warm-blue font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-orange to-warm-green rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">💻</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Digital Skills</h3>
+<p class="text-gray-600 mb-6">
+Technology education and digital literacy programs to prepare children for the digital age and future careers.
+</p>
+<div class="flex items-center text-warm-orange font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-green to-warm-blue rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">🎨</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Creative Arts</h3>
+<p class="text-gray-600 mb-6">
+Art, music, and creative expression programs to develop children's creativity and emotional intelligence.
+</p>
+<div class="flex items-center text-warm-green font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-blue to-warm-orange rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">🏃‍♂️</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Sports & Health</h3>
+<p class="text-gray-600 mb-6">
+Physical education and health programs to promote healthy lifestyles and teamwork among children.
+</p>
+<div class="flex items-center text-warm-blue font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-orange to-warm-blue rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">👥</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Leadership Training</h3>
+<p class="text-gray-600 mb-6">
+Leadership development and character building programs to nurture future leaders of Indonesia.
+</p>
+<div class="flex items-center text-warm-orange font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover section-fade">
+<div class="w-16 h-16 bg-gradient-to-r from-warm-green to-warm-orange rounded-2xl flex items-center justify-center mb-6">
+<span class="text-2xl">🌱</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-800 mb-4">Environmental Education</h3>
+<p class="text-gray-600 mb-6">
+Environmental awareness and sustainability programs to create environmentally conscious future citizens.
+</p>
+<div class="flex items-center text-warm-green font-semibold">
+<span>Learn More</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Donations Section -->
+<section id="donations" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 section-fade">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">Support Our Mission</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+Your donation helps us provide quality education and opportunities to children across Indonesia. Every contribution makes a difference.
+</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="section-fade">
+<div class="bg-gradient-to-r from-soft-blue to-soft-green rounded-3xl p-8">
+<h3 class="text-3xl font-bold text-gray-800 mb-6">Choose Your Impact</h3>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="donation-btn bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300" data-amount="50000">
+<div class="text-2xl font-bold text-warm-blue mb-2">Rp 50,000</div>
+<div class="text-sm text-gray-600">School supplies for 1 child</div>
+</button>
+<button class="donation-btn bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300" data-amount="150000">
+<div class="text-2xl font-bold text-warm-orange mb-2">Rp 150,000</div>
+<div class="text-sm text-gray-600">Monthly program support</div>
+</button>
+<button class="donation-btn bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300" data-amount="300000">
+<div class="text-2xl font-bold text-warm-green mb-2">Rp 300,000</div>
+<div class="text-sm text-gray-600">Technology training kit</div>
+</button>
+<button class="donation-btn bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300" data-amount="500000">
+<div class="text-2xl font-bold text-purple-600 mb-2">Rp 500,000</div>
+<div class="text-sm text-gray-600">Sponsor a child's education</div>
+</button>
+</div>
+<div class="mb-6">
+<label class="block text-gray-700 font-semibold mb-2">Custom Amount (Rp)</label>
+<input type="number" id="custom-amount" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue" placeholder="Enter custom amount">
+</div>
+<button id="donate-btn" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg">
+Donate Now
+</button>
+</div>
+</div>
+
+<div class="section-fade">
+<h3 class="text-3xl font-bold text-gray-800 mb-6">How Your Donation Helps</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<span class="text-white text-xl">📚</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-gray-800 mb-2">Educational Materials</h4>
+<p class="text-gray-600">Books, learning materials, and educational resources for children in underserved communities.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-orange rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<span class="text-white text-xl">👨‍🏫</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-gray-800 mb-2">Qualified Teachers</h4>
+<p class="text-gray-600">Training and supporting dedicated teachers who make a difference in children's lives.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-green rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<span class="text-white text-xl">🏫</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-gray-800 mb-2">Learning Facilities</h4>
+<p class="text-gray-600">Building and maintaining safe, conducive learning environments for children.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<span class="text-white text-xl">🎯</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-gray-800 mb-2">Skill Development</h4>
+<p class="text-gray-600">Specialized programs to develop 21st-century skills and competencies.</p>
+</div>
+</div>
+</div>
+
+<div class="mt-8 p-6 bg-gradient-to-r from-warm-blue to-warm-green rounded-2xl text-white">
+<h4 class="text-xl font-semibold mb-2">Transparency Promise</h4>
+<p class="opacity-90">We provide regular updates on how your donations are used and the impact they create in children's lives.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Documentation Section -->
+<section id="documentation" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 section-fade">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">Our Impact in Action</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+See the difference we're making in children's lives through our comprehensive documentation of programs and activities.
+</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-warm-blue to-warm-green flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">📸</div>
+<h3 class="text-xl font-semibold">Literacy Program</h3>
+<p class="text-sm opacity-90">Jakarta, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Reading Circle Activities</h4>
+<p class="text-gray-600 text-sm mb-4">Children participating in interactive reading sessions to improve their literacy skills.</p>
+<button class="text-warm-blue font-semibold text-sm hover:underline">View Gallery</button>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-warm-orange to-warm-green flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">🎥</div>
+<h3 class="text-xl font-semibold">Digital Skills Workshop</h3>
+<p class="text-sm opacity-90">Surabaya, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Technology Training</h4>
+<p class="text-gray-600 text-sm mb-4">Students learning computer skills and digital literacy in our modern lab.</p>
+<button class="text-warm-orange font-semibold text-sm hover:underline">Watch Video</button>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-warm-green to-warm-blue flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">📸</div>
+<h3 class="text-xl font-semibold">Art & Creativity</h3>
+<p class="text-sm opacity-90">Bandung, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Creative Expression</h4>
+<p class="text-gray-600 text-sm mb-4">Children showcasing their artistic talents in painting and craft activities.</p>
+<button class="text-warm-green font-semibold text-sm hover:underline">View Gallery</button>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-purple-500 to-warm-orange flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">🎥</div>
+<h3 class="text-xl font-semibold">Sports Day</h3>
+<p class="text-sm opacity-90">Yogyakarta, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Physical Education</h4>
+<p class="text-gray-600 text-sm mb-4">Annual sports competition promoting teamwork and healthy lifestyle.</p>
+<button class="text-purple-500 font-semibold text-sm hover:underline">Watch Video</button>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-warm-blue to-purple-500 flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">📸</div>
+<h3 class="text-xl font-semibold">Leadership Camp</h3>
+<p class="text-sm opacity-90">Bali, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Future Leaders</h4>
+<p class="text-gray-600 text-sm mb-4">Young leaders participating in character building and leadership training.</p>
+<button class="text-warm-blue font-semibold text-sm hover:underline">View Gallery</button>
+</div>
+</div>
+
+<div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover section-fade">
+<div class="h-48 bg-gradient-to-r from-warm-green to-warm-orange flex items-center justify-center">
+<div class="text-center text-white">
+<div class="text-4xl mb-2">🎥</div>
+<h3 class="text-xl font-semibold">Environmental Project</h3>
+<p class="text-sm opacity-90">Medan, 2024</p>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-semibold text-gray-800 mb-2">Green Initiative</h4>
+<p class="text-gray-600 text-sm mb-4">Students learning about environmental conservation through hands-on activities.</p>
+<button class="text-warm-green font-semibold text-sm hover:underline">Watch Video</button>
+</div>
+</div>
+</div>
+
+<div class="text-center mt-12 section-fade">
+<button class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">
+View Complete Gallery
+</button>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 section-fade">
+<h2 class="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+Ready to join our mission or have questions? We'd love to hear from you. Contact us today!
+</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="section-fade">
+<div class="bg-gradient-to-r from-soft-blue to-soft-green rounded-3xl p-8">
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+<form id="contact-form" class="space-y-6">
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+<input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue" placeholder="Your full name" required>
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+<input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue" placeholder="your.email@example.com" required>
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Phone Number</label>
+<input type="tel" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue" placeholder="+62 xxx xxxx xxxx">
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Subject</label>
+<select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue">
+<option>General Inquiry</option>
+<option>Volunteer Opportunity</option>
+<option>Partnership</option>
+<option>Donation Question</option>
+<option>Program Information</option>
+</select>
+</div>
+<div>
+<label class="block text-gray-700 font-semibold mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-warm-blue" placeholder="Tell us how we can help you..." required></textarea>
+</div>
+<button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-semibold text-lg">
+Send Message
+</button>
+</form>
+</div>
+</div>
+
+<div class="section-fade">
+<h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+<div class="space-y-6 mb-8">
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-blue rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+</svg>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-800 mb-1">Address</h4>
+<p class="text-gray-600">Jl. Pendidikan No. 123<br>Jakarta Selatan 12345<br>Indonesia</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-orange rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+</svg>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-800 mb-1">Phone</h4>
+<p class="text-gray-600">+62 21 1234 5678<br>+62 812 3456 7890</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-warm-green rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+</svg>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-800 mb-1">Email</h4>
+<p class="text-gray-600">info@akanfoundation.org<br>contact@akanfoundation.org</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+</svg>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-800 mb-1">Office Hours</h4>
+<p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
+</div>
+</div>
+</div>
+
+<div class="bg-gradient-to-r from-warm-blue to-warm-green rounded-2xl p-6 text-white">
+<h4 class="text-xl font-semibold mb-4">Visit Our Location</h4>
+<div class="bg-white rounded-xl p-4">
+<div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+<div class="text-center text-gray-600">
+<svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+</svg>
+<p class="font-semibold">Interactive Map</p>
+<p class="text-sm">Click to view location</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 bg-gradient-to-r from-warm-blue to-warm-green rounded-full flex items-center justify-center mr-3">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+</div>
+<span class="text-xl font-bold">AKAN Foundation</span>
+</div>
+<p class="text-gray-300 mb-4">
+Empowering Indonesia's children through quality education and competency development programs.
+</p>
+<div class="flex space-x-4">
+<div class="w-8 h-8 bg-warm-blue rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-80">
+<span class="text-sm">f</span>
+</div>
+<div class="w-8 h-8 bg-warm-orange rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-80">
+<span class="text-sm">t</span>
+</div>
+<div class="w-8 h-8 bg-warm-green rounded-full flex items-center justify-center cursor-pointer hover:bg-opacity-80">
+<span class="text-sm">in</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#about" class="text-gray-300 hover:text-warm-orange transition-colors">About Us</a></li>
+<li><a href="#programs" class="text-gray-300 hover:text-warm-orange transition-colors">Our Programs</a></li>
+<li><a href="#donations" class="text-gray-300 hover:text-warm-orange transition-colors">Donate</a></li>
+<li><a href="#documentation" class="text-gray-300 hover:text-warm-orange transition-colors">Gallery</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Programs</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-warm-orange transition-colors">Literacy Enhancement</a></li>
+<li><a href="#" class="text-gray-300 hover:text-warm-orange transition-colors">Digital Skills</a></li>
+<li><a href="#" class="text-gray-300 hover:text-warm-orange transition-colors">Creative Arts</a></li>
+<li><a href="#" class="text-gray-300 hover:text-warm-orange transition-colors">Leadership Training</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+<div class="space-y-2 text-gray-300">
+<p>Jl. Pendidikan No. 123</p>
+<p>Jakarta Selatan 12345</p>
+<p>+62 21 1234 5678</p>
+<p>info@akanfoundation.org</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 mt-8 pt-8 text-center">
+<p class="text-gray-300">
+© 2024 Akselerasi Kompetensi Anak Negeri Foundation. All rights reserved.
+</p>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+// Close mobile menu if open
+mobileMenu.classList.add('hidden');
+}
+});
+});
+
+// Donation amount selection
+const donationBtns = document.querySelectorAll('.donation-btn');
+const customAmountInput = document.getElementById('custom-amount');
+let selectedAmount = 0;
+
+donationBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+donationBtns.forEach(b => b.classList.remove('ring-2', 'ring-warm-blue'));
+btn.classList.add('ring-2', 'ring-warm-blue');
+selectedAmount = parseInt(btn.dataset.amount);
+customAmountInput.value = '';
+});
+});
+
+customAmountInput.addEventListener('input', () => {
+donationBtns.forEach(b => b.classList.remove('ring-2', 'ring-warm-blue'));
+selectedAmount = parseInt(customAmountInput.value) || 0;
+});
+
+// Donation button functionality
+document.getElementById('donate-btn').addEventListener('click', () => {
+const amount = selectedAmount || parseInt(customAmountInput.value) || 0;
+if (amount > 0) {
+alert(`Thank you for your generous donation of Rp ${amount.toLocaleString()}! This is a demo - in a real implementation, this would redirect to a secure payment gateway.`);
+} else {
+alert('Please select or enter a donation amount.');
+}
+});
+
+// Contact form submission
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+e.preventDefault();
+alert('Thank you for your message! This is a demo form. In a real implementation, your message would be sent to our team.');
+});
+
+// Scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.section-fade').forEach(el => {
+observer.observe(el);
+});
+
+// Gallery and video functionality
+document.querySelectorAll('[data-action="view-gallery"], [data-action="watch-video"]').forEach(btn => {
+btn.addEventListener('click', () => {
+alert('This would open the gallery or video in a real implementation. Demo content only.');
+});
+});
+
+// Add click handlers for gallery buttons
+document.querySelectorAll('button').forEach(btn => {
+if (btn.textContent.includes('View Gallery') || btn.textContent.includes('Watch Video')) {
+btn.addEventListener('click', () => {
+alert('This would open the media content in a real implementation. Demo content only.');
+});
+}
+});
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96dc650c0009173d',t:'MTc1NDk2NDE5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
